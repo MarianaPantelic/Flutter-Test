@@ -37,9 +37,13 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       icon: Icon(Icons.info, color: Colors.black),
       content: PrimaryButton()),
     ContentView(
-      tab: CustomTab(title: 'PORTFOLIO'), 
+      tab: CustomTab(title: 'PLAY'), 
       icon: Icon(Icons.play_circle, color: Colors.black),
-      content: SecondaryButton()),
+      content: Center(
+        child: Container(
+          margin: EdgeInsets.only(top: 50),
+          width: 500,
+          child: TextToSpeech()),)),
     ContentView(
       tab: CustomTab(title: 'NEWS'), 
       icon: Icon(Icons.insert_comment, color: Colors.black),
@@ -47,10 +51,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     ContentView(
       tab: CustomTab(title: 'CONTACT'),
       icon: Icon(Icons.phone, color: Colors.black),
-      content: Center(
-        child: Container(child: TextToSpeech())
-      )
-    )];
+      content: SecondaryButton())
+      
+    ];
 
   
 
